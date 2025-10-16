@@ -4,18 +4,18 @@ import * as React from 'react';
 import { ScrollView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-  Badge,
-  Button,
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Input,
-  Text,
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Badge,
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    Input,
+    Text,
 } from '../components/ui';
 import { useProfileStore } from '../store/profileStore';
 import type { RootStackParamList } from '../navigation/types';
@@ -64,7 +64,7 @@ function HomeScreen() {
             </View>
           </View>
           <Badge variant="secondary" className="uppercase tracking-wide">
-            {role}
+            <Text>{role}</Text>
           </Badge>
         </View>
 
@@ -77,7 +77,7 @@ function HomeScreen() {
         <Card className="gap-6 overflow-hidden">
           <CardHeader className="gap-3">
             <Badge variant="outline" className="self-start">
-              Starter Kit
+               <Text>Starter Kit</Text>
             </Badge>
             <CardTitle>Kickstart your next build</CardTitle>
             <CardDescription>
@@ -87,9 +87,9 @@ function HomeScreen() {
           </CardHeader>
           <CardContent className="gap-3">
             <Button onPress={() => navigation.navigate('Profile')}>
-              View profile
+              <Text>View profile</Text>
             </Button>
-            <Button variant="outline">Open component gallery</Button>
+            <Button variant="outline"><Text>Open component gallery</Text></Button>
           </CardContent>
         </Card>
 
@@ -111,7 +111,7 @@ function HomeScreen() {
                   <Text>Build immersive flows with cohesive primitives.</Text>
                 </View>
                 <Badge variant="outline" className="self-start">
-                  Active
+                   <Text>Active</Text>
                 </Badge>
               </Card>
             ))}
@@ -128,13 +128,13 @@ function HomeScreen() {
           </CardHeader>
           <CardContent className="gap-3">
             <Button size="lg" onPress={() => navigation.navigate('Profile')}>
-              Continue set up
+              <Text>Continue set up</Text>
             </Button>
             <Button
               variant="ghost"
               onPress={() => navigation.navigate('Profile')}
             >
-              Review profile settings
+               <Text>Review profile settings</Text>
             </Button>
           </CardContent>
         </Card>

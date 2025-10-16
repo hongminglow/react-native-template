@@ -2,6 +2,7 @@ import { StatusBar, useColorScheme } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AppNavigator } from './src/navigation/AppNavigator';
+import './global.css';
 
 const ROOT_VIEW_STYLE = { flex: 1 } as const;
 

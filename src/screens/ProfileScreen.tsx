@@ -4,18 +4,18 @@ import * as React from 'react';
 import { ScrollView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-  Badge,
-  Button,
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Input,
-  Text,
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Badge,
+    Button,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+    Input,
+    Text,
 } from '../components/ui';
 import type { RootStackParamList } from '../navigation/types';
 import { useProfileStore } from '../store/profileStore';
@@ -68,7 +68,7 @@ function ProfileScreen() {
           <View className="items-center gap-2">
             <Text variant="h3">{name}</Text>
             <Badge variant="secondary" className="tracking-wide uppercase">
-              {role}
+              <Text>{role}</Text>
             </Badge>
             <Text variant="small" className="text-muted-foreground">
               {location}
@@ -77,13 +77,13 @@ function ProfileScreen() {
           <View className="flex-row flex-wrap justify-center gap-2">
             {interestList.map(interest => (
               <Badge key={interest} variant="outline">
-                {interest}
+                 <Text>{interest}</Text>
               </Badge>
             ))}
           </View>
           <View className="w-full flex-row gap-3">
             <Button className="flex-1" size="sm">
-              Share profile
+               <Text>Share profile</Text>
             </Button>
             <Button
               className="flex-1"
@@ -91,7 +91,7 @@ function ProfileScreen() {
               variant="outline"
               onPress={() => navigation.navigate('Home')}
             >
-              Back home
+               <Text>Back home</Text>
             </Button>
           </View>
         </Card>
@@ -125,7 +125,7 @@ function ProfileScreen() {
               disabled={!isDirty}
               onPress={() => updateProfile({ bio: bioDraft.trim() })}
             >
-              Save changes
+               <Text>Save changes</Text>
             </Button>
           </CardContent>
         </Card>

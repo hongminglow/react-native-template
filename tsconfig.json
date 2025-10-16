@@ -1,7 +1,15 @@
 {
   "extends": "@react-native/typescript-config",
   "compilerOptions": {
-    "types": ["nativewind/types"]
+    "types": ["nativewind/types"],
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["**/node_modules", "**/Pods"]
